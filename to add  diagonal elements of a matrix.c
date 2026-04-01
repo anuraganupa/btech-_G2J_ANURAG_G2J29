@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int a[50][50],n,sum=0,i,j;
+    printf("enter order of matrix");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++){
+            printf("enter a [%d][%d]=",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for (i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j||(i+j==n-1))
+            {
+                sum+=a[i][j];
+            }
+        }
+    }
+    printf("sum of diagonal element %d",sum);
+    return 0;
+}
